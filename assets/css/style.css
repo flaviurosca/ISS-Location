@@ -1,0 +1,259 @@
+:root {
+  font-size: 10px;
+  --nasa-blue: rgba(11, 61, 145, 1);
+  --nasa-red: rgba(252, 61, 33, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Titillium Web", sans-serif;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--nasa-blue);
+  border-radius: 5px;
+}
+
+.header img {
+  height: 90px;
+  transition: 0.5s all ease;
+}
+
+.header img:hover {
+  transform: scale(1.1);
+}
+
+main {
+  margin: 10px auto;
+  border-top: 5px solid var(--nasa-blue);
+  padding-top: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.iss-section {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.iss-section h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.iss-section p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.iss-container {
+  min-width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  background-color: rgba(11, 61, 145, 0.1);
+  padding: 10px;
+}
+
+.iss-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.iss-img img {
+  height: 60px;
+}
+
+.globe {
+  border: 2px solid var(--nasa-blue);
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  overflow: hidden;
+}
+
+.globe img {
+  animation: rotation 20s linear 0s infinite;
+}
+
+.iss-info {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#mapid {
+  width: 600px;
+  height: 400px;
+  margin: 20px 0;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.nasa-section {
+  color: rgba(255, 255, 255, 1);
+  margin-left: 20px;
+  text-align: center;
+  background-color: rgba(11, 61, 145, 0.1);
+  height: fit-content;
+}
+
+.nasa-section h1 {
+  font-size: 2rem;
+  background-color: white;
+  color: var(--nasa-blue);
+  border-radius: 5px;
+}
+
+.nasa-section #number-in-space {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+
+.person-element {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.5rem;
+}
+
+.person-element:first-child {
+  color: var(--nasa-blue);
+  font-weight: bold;
+}
+
+.person-craft {
+  letter-spacing: 2px;
+}
+
+.picture-of-the-day {
+  margin-top: 50px;
+}
+
+#picture-title,
+#picture-date {
+  font-size: 1.5rem;
+  padding-top: 5px;
+}
+
+.picture-element img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+@keyframes rotation {
+  from {
+    transform: translateX(0);
+  }
+  
+  from {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .iss-section {
+    width: 90%;
+  }
+
+  #mapid {
+    width: 500px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .iss-section {
+    width: 100%;
+  }
+
+  .nasa-section {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    min-height: 5px;
+  }
+
+  .header img {
+    height: 55px;
+  }
+
+  .iss-section {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #mapid {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .iss-section {
+    width: 100%;
+  }
+
+  .iss-section h1 {
+    font-size: 2rem;
+  }
+
+  .iss-container {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  .iss-img img {
+    height: 30px;
+  }
+  
+  .globe {
+    border: 2px solid var(--nasa-blue);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+  }
+  .nasa-section {
+    width: 100%;
+  }
+}

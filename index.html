@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="./assets/js/app.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <title>ISS Location</title>
+</head>
+
+<body>
+  <header class="header">
+    <a href="https://www.nasa.gov/mission_pages/station/main/index.html" target="_blank">
+      <img class="iss-logo" src="./assets/img/ISS_logo_-_Off_the_Earth_For_the_Earth.svg" alt="ISS logo">
+    </a>
+    <a href="https://www.nasa.gov/" target="_blank">
+      <img class="nasa-logo" src="./assets/img/nasa-logo-web-rgb.png" alt="NASA logo">
+    </a>
+  </header>
+  <main>
+    <section class="iss-section">
+      <h1>International Space Station Current Location</h1>
+      <p>The International Space Station is moving at approximately 28,000 km/h, so its location changes really fast! Where is
+        it right now?
+      </p>
+      <div class="iss-container">
+        <div class="iss-animation">
+          <div class="iss-img">
+            <img src="./assets/img/International_Space_Station.svg" alt="ISS">
+          </div>
+          <div class="globe">
+            <img src="./assets/img/globe.svg" alt="globe">
+          </div>
+        </div>
+        <div class="iss-info">
+          <p id="iss-lat">Lat: </p>
+          <p id="iss-lon">Lon: </p>
+        </div>
+      </div>
+      <div id="mapid"></div>
+    </section>
+    <section class="nasa-section">
+      <h1>People in space right now</h1>
+      <p id="number-in-space">0</p>
+      <div class="people-in-space">
+        <div class="person-element">
+          <div>Astronaut</div>
+          <div>Location</div>
+        </div>
+      </div>
+      <article class="picture-of-the-day">
+        <h1>Astronomy picture of the day</h1>
+        <p id="picture-date"></p>
+        <p id="picture-title"></p>
+        <div class="picture-element">
+          <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank">
+            <img id="astronomy-picture" src="" alt="Astronomy Picture of the Day">
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+
+</html>
